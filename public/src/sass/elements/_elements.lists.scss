@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+.ul {
+    list-style: square outside;
+}
+
+.ol {
+	list-style-type:decimal;
+}
+
+li > {
+
+    ul,
+    ol {
+        margin-left: 2 * $spacing-unit;
+        margin-bottom: 0;
+    }
+
+}

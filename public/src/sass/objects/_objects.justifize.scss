@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #JUSTIFIZE
+\*------------------------------------*/
+
+/*
+    http://www.css-101.org/articles/responsive-boxes/magic-boxes.php
+
+    <div class="o-justifize">
+      <div class="o-justifize__box">
+        o-justifize box content
+      </div>
+      <div class="o-justifize__box">
+        o-justifize box content
+      </div>
+      <div class="o-justifize__box">
+        o-justifize box content
+      </div>
+    </div>
+*/
+
+//JUSTIFIZE
+.o-justifize {
+    font-size: 1px;     /* IE 9, 10, 11 FIX */
+    text-align: justify;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.o-justifize__box {
+    @include font-size($base-font-size);
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+
+    .o-justifize--top & {
+        vertical-align: top;
+    }
+
+    .o-justifize--bottom & {
+        vertical-align: bottom;
+    }
+}

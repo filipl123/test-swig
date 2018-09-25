@@ -1,0 +1,8 @@
+<!-- Calling macro in html -->
+<!-- {{ logo('images/logo.svg', 'Site logo', 'header-main__logo', 'index.html') }} -->
+
+{% macro logo(url, alt, classModifier, href) %}
+  <a class="site-logo {{ classModifier }}" href="{{ href }}">
+    <img alt="{{ alt }}" src="{{ url }}">
+  </a>
+{% endmacro %}

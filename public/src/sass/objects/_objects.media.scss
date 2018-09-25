@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+
+/**
+
+   <div class="o-media">
+       <div class="o-media__img">
+            <img src="images/img.jpg">
+       </div>
+       <div class="o-media__body">
+       </div>
+   </div>
+ */
+
+.o-media {
+    display: table;
+    width: 100%;
+}
+
+    .o-media__img,
+    .o-media__body {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .o-media__img {
+        padding-right: $spacing-unit;
+
+        img {
+            display: block;
+            max-width: none;
+        }
+
+    }
+
+    .o-media__body {
+        width: 100%;
+    }
+
+
+/**
+ * Media fix.
+ */
+.o-media--fix {
+
+    .o-media__img {
+        width: 1px;
+    }
+
+    .o-media__body {
+        width: auto;
+    }
+}

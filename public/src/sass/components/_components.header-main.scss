@@ -1,0 +1,123 @@
+/*------------------------------------*\
+    #HEADER MAIN
+\*------------------------------------*/
+
+$header-height: 70px;
+$header-bgr: #fff;
+
+.header-main {
+	font-size: 14px;
+	height: $header-height;
+	background-color: $header-bgr;
+	border-bottom: $color-gray-light2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*.header-main--fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+
+	+ main {
+		padding-top: $header-height;
+	}
+}*/
+
+
+////////////////////////////////////////////////////////////////////////////////////////////LOGO
+.logo {
+	height: 30px;
+	margin-left: 30px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////SEARCH BOX
+
+.search {
+	flex: 0 0 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__input {
+		font-family: inherit;
+		font-size: inherit;
+		background-color: $color-gray-light2;
+		border: none;
+		color: inherit;
+		padding: 10px;
+		border-radius: 100px;
+		width: 90%;
+		transition: $base-transition;
+		margin-right: -45px;
+
+		&:focus {
+			outline: none;
+			width: 100%;
+			background-color: $color-gray-light3;
+		}
+
+		&::-webkit-input-placeholder {
+			font-weight: 100;
+			color: $color-gray-light4;
+		}
+	}
+
+	&__input:focus + &__button {
+		background-color: $color-gray-light3;
+	}
+
+	&__button {
+		border: none;
+		background-color: $color-gray-light2;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			transform: translateY(2px);	
+		}
+	}
+
+	&__icon {
+		height: 20px;
+		width: 20px;
+		fill: $color-gray-dark3;
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////USER NAVIGATION
+
+.user-nav {
+	&__icon-box {
+
+	}
+
+	&__icon {
+		height: 25px;
+		width: 25px;
+	}
+
+	&__notification {
+
+	}
+
+	&__user {
+
+	}
+
+	&__user-photo {
+		height: 35px;
+		border-radius: 50%;
+	}
+
+	&__user-name {
+
+	}
+}

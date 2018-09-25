@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    #TABLEIZE
+\*------------------------------------*/
+
+/**
+ * The `.o-tableize__content` serves as container for cell content. If you need
+ * width or padding set on a cell, make sure you set it to `.o-tableize__content`
+ * instead since that is what makes the whole thing work. That being said
+ * `.o-tableize__content` is optional.
+
+   <div class="o-tableize">
+     <div class="o-tableize__cell">
+       <div class="o-tableize__content">
+         cell content
+       </div>
+     </div>
+     <div class="o-tableize__cell">
+       <div class="o-tableize__content">
+         cell content
+       </div>
+     </div>
+   </div>
+ */
+
+.o-tableize {
+    display: table;
+    width: 100%;
+}
+
+    /**
+     * Tableize cell.
+     */
+    .o-tableize__cell {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    /**
+     * Filler cell. There is no need for using this class if parent `.o-tableize`
+     * has `.o-tableize--fixed` modifier.
+     *
+     * 1. Fills the rest of the row when one or more cells have fixed width.
+     */
+    .o-tableize__cell--fill {
+        width: 100%; /* [1] */
+    }
+
+    /**
+     * Middle tableize aligns tableize cell to their middles.
+     */
+
+    .o-tableize--middle {
+
+        > .o-tableize__cell {
+            vertical-align: middle;
+        }
+
+    }
+
+    /**
+     * Bottom tableize aligns tableize cell to their bottom.
+     */
+
+    .o-tableize--bottom {
+
+        > .o-tableize__cell {
+            vertical-align: bottom;
+        }
+
+    }
+
+    /**
+     * Fixed tableize makes:
+     * - all cells occupy equal width or
+     * - if one (or more) cells are fixed (or percentage base) width
+     *   the remaining columns will occupy rest of the available space.
+     *
+     * More info about `table-layout: fixed;` at
+     * http://css-tricks.com/fixing-tables-long-strings/
+     */
+
+    .o-tableize--fixed {
+        table-layout: fixed;
+    }
+
+    /**
+     * Full height tableize.
+     */
+
+    .o-tableize--full {
+        height: 100%;
+
+        > .o-tableize__cell {
+
+            &,
+            > .o-tableize__content {
+                height: inherit;
+            }
+
+        }
+
+    }
+
+    /**
+     * Tableize row is needed for sticky header/footer
+     */
+
+    .o-tableize__row {
+        display: table-row;
+        height: 1px;
+    }
+
+    .o-tableize__row--flexible {
+        height: auto;
+    }

@@ -1,0 +1,23 @@
+{
+  "name": "test-swig",
+  "version": "0.1.0",
+  "author": "",
+  "description": "",
+  "keywords": [
+    "html",
+    "css",
+    "scss"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "svg4everybody": "latest"
+  }
+}

@@ -1,0 +1,9 @@
+<!-- Calling macro in html -->
+<!-- {{ icon('icon-arrow-up', 'icon--large') }} -->
+
+{% macro icon(name, classModifier) %}
+  <svg role="img" class="icon {{ classModifier}}">
+    <use xlink:href="icons/icons.svg#{{ name }}"></use>
+  </svg>
+{% endmacro %}
+

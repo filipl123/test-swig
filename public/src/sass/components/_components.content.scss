@@ -1,0 +1,23 @@
+body {
+    font-family: $base-font-family;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-gray-dark2;
+    background-image: linear-gradient(to right, $color-brand-light, $color-brand-dark);
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.section-nesto {
+    padding: 80px 0;
+}
+
+.content {
+    display: flex;
+}
+
+.hotel-view {
+    background-color: #fff;
+    flex: 1;
+}

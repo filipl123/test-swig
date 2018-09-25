@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    #INPUTS
+\*------------------------------------*/
+
+/**
+ * Base input styles.
+ */
+.c-input {
+    -webkit-appearance: none;       /* removing inner shadow on iOS inputs */
+    -webkit-font-smoothing: inherit;
+    box-sizing: border-box;
+    transition: $base-transition;
+    background: none;
+    border: none;
+    color: $color-text;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    padding: 0;                     /* remove browser defaults */
+    vertical-align: middle;
+    width: 100%;
+
+    &:invalid {
+        box-shadow: none;  /* fixes mozilla red outline (shadow) */
+    }
+
+    &[readonly] {
+        cursor: text;
+    }
+
+    &::-ms-clear {
+        display: none; /* remove IE clear icon */
+    }
+
+    @include input-placeholder {
+       color: $color-text;
+    }
+}
+
+/**
+ * Primary input.
+ */
+.c-input--primary {
+
+    &:not(:disabled) {
+
+        /**
+         * @hover
+         */
+        &:hover {
+        }
+
+        /**
+         * @focus
+         */
+        &:focus {
+
+        }
+
+        @include input-placeholder {
+           color: $color-input-placeholder;
+        }
+
+        /**
+         * Error state.
+         */
+        .is-error &,
+        &.is-error {
+            border-color: $color-error;
+        }
+    }
+
+    /**
+     * @disabled
+     */
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+/**
+ * Textarea input.
+ */
+.c-input--textarea {
+    resize: none;
+}

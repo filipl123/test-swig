@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #Project styles
+\*------------------------------------*/
+
+@import "./settings/settings.global";
+@import "./settings/settings.colors";
+
+@import "./tools/tools.mixins";
+
+@import "./generic/generic.normalize";
+@import "./generic/generic.box-sizing";
+@import "./generic/generic.reset";
+@import "./generic/generic.fonts";
+@import "./generic/generic.shared";
+
+@import "./elements/elements.page";
+@import "./elements/elements.headings";
+@import "./elements/elements.links";
+@import "./elements/elements.lists";
+@import "./elements/elements.images";
+@import "./elements/elements.quotes";
+@import "./elements/elements.table";
+
+@import "./objects/objects.wrappers";
+@import "./objects/objects.media";
+@import "./objects/objects.tableize";
+@import "./objects/objects.justifize";
+@import "./objects/objects.embedded";
+@import "./objects/objects.icons";
+@import "./objects/objects.flex";
+
+@import "./components/components.avatars";
+@import "./components/components.buttons";
+@import "./components/components.footer-main";
+@import "./components/components.header-main";
+@import "./components/components.inputs";
+@import "./components/components.site-logo";
+@import "./components/components.testimonials";
+@import "./components/components.content";
+@import "./components/components.sidebar";
+
+@import "./trumps/trumps.widths";
+@import "./trumps/trumps.spacing";
+@import "./trumps/trumps.font";
+@import "./trumps/trumps.helpers";
+@import "./trumps/trumps.backgrounds";
+@import "./trumps/trumps.colors";

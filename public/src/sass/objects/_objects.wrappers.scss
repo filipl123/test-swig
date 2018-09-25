@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #WRAPPER
+\*------------------------------------*/
+
+.container {
+    max-width: 100%;
+    //padding-right: $spacing-unit--small;
+    //padding-left:  $spacing-unit--small;
+    background-color: $color-gray-light1;
+    box-shadow: $color-shadow-dark;
+
+    height: 500px;
+
+    @include min-screen($breakpoint-large) {
+	    max-width: calc(#{$page-max-width} + (#{$spacing-unit} * 2));
+	    //padding-right: $spacing-unit;
+	    //padding-left:  $spacing-unit;
+	    margin-right: auto;
+	    margin-left:  auto;
+    }
+}

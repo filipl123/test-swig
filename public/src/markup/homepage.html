@@ -1,0 +1,15 @@
+{% extends "./_templates/template.default.html" %}
+{% set title = "Homepage" %}
+{% set page = "homepage" %}
+
+{% block content %}
+<section class="section-nesto">
+	<div class="container">
+		{% include "_components/component.header.html" %}
+		<main class="hotel-view">
+			hotel view
+		</main>
+	</div>
+</section>
+{% include "_components/component.footer.html" %}
+{% endblock %}

@@ -1,0 +1,80 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+$btn-height:                        50px;
+
+.c-btn {
+    -webkit-font-smoothing: inherit;
+    background-color: transparent;
+    border-radius: $base-radius;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    vertical-align: middle;
+    width: 100%;
+
+    &:not(:disabled) {
+
+        /**
+         * @hover,
+         * @focus,
+         * @active,
+         */
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+
+    /**
+     * @disabled
+     */
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.c-btn--primary {
+    background-color: $color-btn-bgr;
+    border-radius: 0;
+    border: 1px solid white;
+    color: $color-btn;
+    height: $btn-height;
+    padding: 0 $spacing-unit--small;
+
+    &:not(:disabled) {
+
+        /**
+         * @hover
+         */
+        &:hover {
+            background-color: $color-btn-bgr--hover;
+            color: $color-btn--hover;
+        }
+
+        /**
+         * @focus
+         */
+        &:focus {
+            background-color: $color-btn-bgr--focus;
+            color: $color-btn--focus;
+        }
+
+        /**
+         * @active
+         */
+        &:active {
+            background-color: $color-btn-bgr--active;
+            color: $color-btn--active;
+        }
+    }
+}

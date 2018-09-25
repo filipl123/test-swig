@@ -1,0 +1,35 @@
+{
+  "name": "test1",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "*",
+    "graceful-fs": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-rename": "*",
+    "gulp-html-prettify": "*",
+    "gulp-plumber": "*",
+    "gulp-rimraf": "*",
+    "gulp-svg-symbols": "*",
+    "gulp-livereload": "*",
+    "gulp-svgmin": "*",
+    "gulp-swig": "*",
+    "gulp-uglify": "*",
+    "open": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-notify": "*",
+    "gulp-sass": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

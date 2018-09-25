@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #SITE LOGO
+\*------------------------------------*/
+
+$site-logo-width: 100px;
+
+.c-site-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: $site-logo-width;
+    @include disable-text-select;
+
+    > img {
+        height: auto;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
