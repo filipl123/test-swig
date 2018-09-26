@@ -9,8 +9,6 @@
     background-color: $color-gray-light1;
     box-shadow: $color-shadow-dark;
 
-    height: 500px;
-
     @include min-screen($breakpoint-large) {
 	    max-width: calc(#{$page-max-width} + (#{$spacing-unit} * 2));
 	    //padding-right: $spacing-unit;
@@ -18,4 +16,25 @@
 	    margin-right: auto;
 	    margin-left:  auto;
     }
+}
+
+.detail {
+    display: flex;
+    padding: 45px;
+    background-color: $color-gray-light1;
+    border-bottom: $border-bottom;
+}
+
+.description {
+    font-size: 14px;
+    background-color: #fff;
+    flex: 0 0 60%;
+    margin-right: 45px;
+    box-shadow: $color-shadow-light;
+    padding: 30px;
+}
+
+.user-reviews {
+    flex: 1;
+    background-color: orangered;
 }
