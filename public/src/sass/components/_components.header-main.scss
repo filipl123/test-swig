@@ -27,14 +27,16 @@ $header-bgr: #fff;
 }*/
 
 
-////////////////////////////////////////////////////////////////////////////////////////////LOGO
+///////////////////////////////////////////////////////////////////////////////////////
+/////LOGO
 .logo {
 	height: 30px;
 	margin-left: 20px;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////SEARCH BOX
+///////////////////////////////////////////////////////////////////////////////////////
+/////SEARCH BOX
 
 .search {
 	flex: 0 0 40%;
@@ -92,7 +94,8 @@ $header-bgr: #fff;
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////USER NAVIGATION
+////////////////////////////////////////////////////////////////////////////////////////
+////USER NAVIGATION
 
 .user-nav {
 	align-self:  stretch;
@@ -106,10 +109,12 @@ $header-bgr: #fff;
 		padding: 0 20px;
 		cursor: pointer;
 		height: 100%;
+		transition: $base-transition;
 	}
 
 	& > *:hover {
 		background-color: $color-gray-light2;
+		transition: $base-transition;
 	}
 
 
@@ -142,13 +147,78 @@ $header-bgr: #fff;
 		align-items: center;
 	}
 
-	&__user {
-
-	}
-
 	&__user-photo {
 		height: 35px;
 		border-radius: 50%;
 		margin-right: 10px;
 	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+////SIDE NAVIGATION
+
+.side-nav {
+	font-size: 14px;
+	margin-top: 35px;
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__item::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 3px;
+		background-color: $color-brand;
+		transform: scaleY(0);
+		transition: transform .2s, 
+					width .4s cubic-bezier(1,0,0,1) .2s,
+					background-color .1s;
+	}
+
+	&__item:hover::before,
+	&__item--active::before {
+		transform: scaleY(1);
+		width: 100%;
+	}
+
+	&__item:active::before {
+		background-color: $color-brand-light;
+	}
+
+	&__link:link,
+	&__link:visited {
+		color: $color-gray-light1;
+		text-transform: uppercase;
+		display: block;
+		padding: 15px 30px;
+		display: flex;
+		align-items: center;
+		z-index: 10;
+		position: relative;
+	}
+
+	&__icon {
+		width: 18px;
+		height: 18px;
+		margin-right: 20px;
+		fill: currentColor;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+////LEGAL TEXT
+
+.legal {
+	font-size: 12px;
+	color: $color-gray-light4;
+	text-align: center;
+	padding: 25px;
 }
