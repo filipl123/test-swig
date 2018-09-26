@@ -91,8 +91,17 @@ $btn-height:                        50px;
     cursor: pointer;
     transition: $base-transition;
 
+    & span {
+        margin-left: 3px;
+        transition: $base-transition;
+    }
+
     &:hover {
         color: $color-gray-dark1;
+
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {
