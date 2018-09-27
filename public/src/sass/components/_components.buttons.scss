@@ -1,128 +1,181 @@
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
-$btn-height:                        50px;
+$btn-height: 50px;
 
 .c-btn {
-    -webkit-font-smoothing: inherit;
-    background-color: transparent;
-    border-radius: $base-radius;
-    border: none;
-    color: #fff;
-    display: inline-block;
-    margin: 0;
-    outline: none;
-    padding: 0;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    vertical-align: middle;
-    width: 100%;
+  -webkit-font-smoothing: inherit;
+  background-color: transparent;
+  border-radius: $base-radius;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  vertical-align: middle;
+  width: 100%;
 
-    &:not(:disabled) {
-
-        /**
+  &:not(:disabled) {
+    /**
          * @hover,
          * @focus,
          * @active,
          */
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: transparent;
-            color: #fff;
-        }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: #fff;
     }
+  }
 
-    /**
+  /**
      * @disabled
      */
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .c-btn--primary {
-    background-color: $color-btn-bgr;
-    border-radius: 0;
-    border: 1px solid white;
-    color: $color-btn;
-    height: $btn-height;
-    padding: 0 $spacing-unit--small;
+  background-color: $color-btn-bgr;
+  border-radius: 0;
+  border: 1px solid white;
+  color: $color-btn;
+  height: $btn-height;
+  padding: 0 $spacing-unit--small;
 
-    &:not(:disabled) {
-
-        /**
+  &:not(:disabled) {
+    /**
          * @hover
          */
-        &:hover {
-            background-color: $color-btn-bgr--hover;
-            color: $color-btn--hover;
-        }
+    &:hover {
+      background-color: $color-btn-bgr--hover;
+      color: $color-btn--hover;
+    }
 
-        /**
+    /**
          * @focus
          */
-        &:focus {
-            background-color: $color-btn-bgr--focus;
-            color: $color-btn--focus;
-        }
+    &:focus {
+      background-color: $color-btn-bgr--focus;
+      color: $color-btn--focus;
+    }
 
-        /**
+    /**
          * @active
          */
-        &:active {
-            background-color: $color-btn-bgr--active;
-            color: $color-btn--active;
-        }
+    &:active {
+      background-color: $color-btn-bgr--active;
+      color: $color-btn--active;
     }
+  }
 }
 
+.btn-c {
+  font-size: 16px;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    to right,
+    $color-brand-light,
+    $color-brand-dark
+  );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: $base-transition;
+  }
+
+  &__visible {
+    padding: 20px 75px;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 20px 0px;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+        to left,
+        $color-brand-light,
+        $color-brand-dark
+      );
+  }
+
+  &:hover &__visible {
+      transform: translateY(100%)
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+  }
+}
 
 .btn-inline {
-    border: none;
-    color: $color-brand;
-    font-size: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    transition: $base-transition;
+  border: none;
+  color: $color-brand;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $base-transition;
 
-    & span {
-        margin-left: 3px;
-        transition: $base-transition;
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: $color-gray-dark1;
+
+    span {
+      margin-left: 8px;
     }
+  }
 
-    &:hover {
-        color: $color-gray-dark1;
-
-        span {
-            margin-left: 8px;
-        }
-    }
-
-    &:focus {
-        outline: none;
-        animation: pulsate 1s infinite;
-    }
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
 }
 
 @keyframes pulsate {
-    0% {
-        transform: scale(1);
-        box-shadow: none;
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 
-    50% {
-        transform: scale(1.05);
-        box-shadow: $color-shadow-dark;
-    }
+  50% {
+    transform: scale(1.05);
+    box-shadow: $color-shadow-dark;
+  }
 
-    100% {
-        transform: scale(1);
-        box-shadow: none;
-    }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }

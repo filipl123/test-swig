@@ -244,12 +244,28 @@ body {
     &::before {
         content: "\201C";
         position: absolute;
-        top: -8px;
+        top: -12px;
         left: -6px;
         font-size: 200px;
         color: $color-gray-light2;
         line-height: 1;
         font-family: sans-serif;
         z-index: 1;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+////CTA
+
+.cta {
+    padding: 35px 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+
     }
 }
