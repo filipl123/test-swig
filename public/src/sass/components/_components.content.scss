@@ -12,46 +12,46 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
-
 .section-nesto {
   padding: 80px 0;
-}
 
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 !important;
+  }
+}
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+  }
 }
 
 .hotel-view {
   background-color: #fff;
   flex: 1;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////
-////SIDE NAVIGATION
-
+// //////////////////////////////////////////////////////////////////////////////////////
+// //SIDE NAVIGATION
 .gallery {
   display: flex;
-
   figure {
     margin-bottom: 0px;
   }
-
   &__item {
   }
-
   &__photo {
     width: 100%;
+
     display: block;
   }
 }
-
-////////////////////////////////////////////////////////////////////////////////////////
-////HOTEL OVERVIEW
+// //////////////////////////////////////////////////////////////////////////////////////
+// //HOTEL OVERVIEW
 .overview {
   display: flex;
   align-items: center;
   border-bottom: $border-bottom;
-
   &__heading {
     font-size: 22px;
     font-weight: 300;
@@ -59,25 +59,21 @@ body {
     letter-spacing: 1px;
     padding: 15px 30px;
   }
-
   &__stars {
     margin-right: auto;
     display: flex;
   }
-
   &__icon-star,
   &__icon-location {
     width: 18px;
     height: 18px;
     fill: $color-brand;
   }
-
   &__location {
     font-size: 14px;
     display: flex;
     align-items: center;
   }
-
   &__icon-location {
     margin-right: 5px;
   }
@@ -93,30 +89,29 @@ body {
     justify-content: center;
     flex-direction: column;
   }
-
   &__rating-average {
     font-size: 22px;
     font-weight: 300;
   }
-
   &__rating-count {
     font-size: 10px;
     text-transform: uppercase;
   }
 }
-
-////////////////////////////////////////////////////////////////////////////////////////
-////LEGAL TEXT
-
+// //////////////////////////////////////////////////////////////////////////////////////
+// //LEGAL TEXT
 .legal {
   font-size: 12px;
   color: $color-gray-light4;
   text-align: center;
   padding: 25px;
-}
 
-////////////////////////////////////////////////////////////////////////////////////////
-////PARAGRAPH
+  @media only screen and (max-width: $bp-largest) {
+		display: none;
+	  }
+}
+// //////////////////////////////////////////////////////////////////////////////////////
+// //PARAGRAPH
 .description {
   p {
     margin: 0;
@@ -125,9 +120,8 @@ body {
 .paragraph:not(:last-of-type) {
   margin-bottom: 20px;
 }
-
-////////////////////////////////////////////////////////////////////////////////////////
-////LIST
+// //////////////////////////////////////////////////////////////////////////////////////
+// //LIST
 .list {
   margin: 30px 0;
   padding: 30px 0;
@@ -135,20 +129,18 @@ body {
   border-bottom: $border-bottom;
   display: flex;
   flex-wrap: wrap;
-
   &__item {
     flex: 0 0 50%;
     margin-bottom: 7px;
   }
-
   &__item::before {
     content: "";
     display: inline-block;
     height: 10px;
     width: 10px;
     margin-right: 5px;
-    //background-image: url(../images/chevron-thin-right.svg);
-    //background-size: cover;
+    // background-image: url(../images/chevron-thin-right.svg);
+    // background-size: cover;
     background-color: $color-brand;
     -webkit-mask-image: url(../images/chevron-thin-right.svg);
     -webkit-mask-size: cover;
@@ -156,116 +148,107 @@ body {
     mask-size: cover;
   }
 }
-
-////////////////////////////////////////////////////////////////////////////////////////
-////RECOMMEND
-
+// //////////////////////////////////////////////////////////////////////////////////////
+// //RECOMMEND
 .recommend {
   font-size: 16px;
   color: $color-gray-dark2;
   display: flex;
   align-items: center;
-
   &__count {
     margin-right: auto !important;
   }
-
   &__friends {
+    display: flex;
   }
-
   &__photo {
     box-sizing: content-box;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     border: 3px solid #fff;
-
     &:not(:last-child) {
       margin-right: -15px;
     }
   }
 }
-////////////////////////////////////////////////////////////////////////////////////////
-////REVIEW
-
+// //////////////////////////////////////////////////////////////////////////////////////
+// //REVIEW
 .review {
-    position: relative;
-    background-color: #fff;
-    box-shadow: $color-shadow-light;
-    padding: 30px;
-    margin-bottom: 35px;
-    overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  box-shadow: $color-shadow-light;
+  padding: 30px;
+  margin-bottom: 35px;
+  overflow: hidden;
 
-    p {
-        margin: 0px;
-    }
-
-    &__text {
-        margin-bottom: 20px;
-        z-index: 10;
-        position: relative;
-    }
-
-    &__user {
-        display: flex;
-        align-items: center;
-    }
-
-    &__photo {
-        height: 45px;
-        width: 45px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    &__user-box {
-        margin-right: auto;
-    }
-
-    &__user-name {
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-    }
-
-    &__user-date {
-        font-size: 10px;
-        color: $color-gray-dark3;
-    }
-
-    &__rating {
-        color: $color-brand;
-        font-size: 22px;
-        font-weight: 300;
-
-    }
-
-    &::before {
-        content: "\201C";
-        position: absolute;
-        top: -12px;
-        left: -6px;
-        font-size: 200px;
-        color: $color-gray-light2;
-        line-height: 1;
-        font-family: sans-serif;
-        z-index: 1;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    padding: 20px;
+    margin-bottom: 30px;
 }
+  p {
+    margin: 0px;
+  }
+  &__text {
+    margin-bottom: 20px;
 
-////////////////////////////////////////////////////////////////////////////////////////
-////CTA
+    z-index: 10;
+    position: relative;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  &__user-box {
+    margin-right: auto;
+  }
 
+  &__user-name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__user-date {
+    font-size: 10px;
+    color: $color-gray-dark3;
+  }
+  &__rating {
+    color: $color-brand;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -12px;
+    left: -6px;
+    font-size: 200px;
+    color: $color-gray-light2;
+    line-height: 1;
+    font-family: sans-serif;
+    z-index: 1;
+  }
+}
+// //////////////////////////////////////////////////////////////////////////////////////
+// //CTA
 .cta {
-    padding: 35px 0;
-    text-align: center;
+  padding: 35px 0;
+  text-align: center;
 
-    &__book-now {
-        font-size: 18px;
-        font-weight: 300;
-        text-transform: uppercase;
-        margin-bottom: 25px;
-
-    }
+  @media only screen and (max-width: $bp-largest) {
+    padding: 25px 0;
+}
+  &__book-now {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
 }
